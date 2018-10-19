@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Vue 10 - Practical Component Exercise #2: Modal</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.css">
+	<style>
+		body {
+			padding: 2rem;
+		}
+	</style>
+</head>
+<body>
+
+	<div id="root" class="container">
+
+		<a class="button" @click="showModal = true">Show modal</a>
+
+		<modal v-if="showModal" @close="showModal = false">
+			This is a new text
+		</modal>
+	</div>
+
+	<!-- development version, includes helpful console warnings -->
+	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+	<script src="main.js"></script>
+</body>
+</html>

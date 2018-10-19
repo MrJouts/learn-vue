@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Vue 06 - The Need for Computed Properties</title>
+</head>
+<body>
+	
+	<div id="root">
+
+		<h2>Tareas</h2>
+
+		<ul>
+			<li v-for="task in tasks" v-text="task.description"></li>
+		</ul>
+
+		<h2>Tareas no cumplidas</h2>
+		<ul>
+			<li v-for="task in incompletedTasks" v-text="task.description"></li>
+		</ul>
+		
+	</div>
+
+	<!-- development version, includes helpful console warnings -->
+	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+	<script>
+
+		let app = new Vue({
+			el: '#root',
+			data: {
+				tasks: [
+					{description: 'Sacar la basura', completed: true},
+					{description: 'Pasear el perro', completed: true},
+					{description: 'Buscar los auriculares', completed: false},
+					{description: 'Hacer la tarea', completed: false},
+					{description: 'Ir al curso de manejo', completed: true},
+				]
+			},
+			computed: {	
+				incompletedTasks() {
+					return this.tasks.filter(task => ! task.completed)
+				}
+			}
+		});
+
+	</script>
+</body>
+</html>

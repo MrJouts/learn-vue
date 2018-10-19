@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Vue 11 - Practical Component Exercise #3: Tabs</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.css">
+	<style>
+	body {
+		padding: 2rem;
+	}
+</style>
+</head>
+<body>
+
+	<div id="root" class="container">
+
+		<tabs>
+			<tab name="About Us" :selected="true">
+				<h1>The content of the tab About Us</h1>
+			</tab>
+			<tab name="Our Vision">
+				<h1>The content of the tab Our Vision</h1>
+			</tab>
+			<tab name="Contact Us">
+				<h1>The content of the tab Contact Us</h1>
+			</tab>
+		</tabs>
+
+	</div>
+
+	<!-- development version, includes helpful console warnings -->
+	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+	<script src="main.js"></script>
+</body>
+</html>
