@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Vue 13 - Component Communication Example #2: Event Dispatcher</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.css">
+	<style>
+	body {
+		padding: 2rem;
+	}
+</style>
+</head>
+<body>
+
+	<div id="root" class="container">
+		
+		<cupon @applied="onCuponApplied"></cupon>
+		
+		<p v-if="cuponApplied">You use a cupon</p>
+
+	</div>
+
+	<!-- development version, includes helpful console warnings -->
+	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+	<script src="main.js"></script>
+</body>
+</html>

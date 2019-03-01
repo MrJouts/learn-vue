@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Vue 14 - Named Slots in a Nutshell</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.css">
+	<style>
+	body {
+		padding: 2rem;
+	}
+</style>
+</head>
+<body>
+
+	<div id="root" class="container">
+		
+		<modal>
+
+			<template slot="header">This is a Header</template>
+
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem voluptate, quia adipisci neque! Obcaecati maxime, dignissimos ea quod rem, adipisci eos id quis ex culpa labore. Asperiores quod explicabo corrupti soluta quisquam ullam, quos voluptatibus, optio ducimus consectetur ipsum possimus.
+
+			<template slot="footer">
+	      <button class="button is-success">Save changes</button>
+	      <button class="button">Cancel</button>				
+			</template>
+
+		</modal>
+
+	</div>
+
+	<!-- development version, includes helpful console warnings -->
+	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+	<script src="main.js"></script>
+</body>
+</html>
